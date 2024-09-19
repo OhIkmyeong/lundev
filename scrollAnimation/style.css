@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-size:20px;}
+.page{
+    display:flex;flex-flow:column nowrap;
+    justify-content:center; align-items:center;
+    gap:20px;
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    padding:80px 40px;
+    background: repeating-linear-gradient(#dedede, #dedede 10vh, #fefefe 10vh, #fefefe 20vh);
+    border:2px solid #000;
+}
+h1{
+    line-height:0.9em;
+    word-break: break-all;
+    font-size:25vmin;text-transform:uppercase;letter-spacing:-0.05em;}
+h2{
+    font-size:10vmin;text-transform:capitalize;letter-spacing:-0.03em;}
+
+.autoRotate{
+    animation: autoRotateAnimation;
+    animation-timeline:view();
+}
+
+@keyframes autoRotateAnimation {
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+.autoShow{
+    animation: autoShowAnimation;
+    animation-fill-mode:both;
+    /* animation-timeline:view(40% 30%); */
+    animation-timeline:view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+    from{
+        opacity:0;
+        transform:translateY(200px) scale(0.3);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px) scale(1);
+    }
+}
+
+.bigTexts{
+    position:relative;
+    margin-top:40px;
+    font-family:serif; font-size:5vmax;
+}
+
+.autoBlur{
+    animation: autoBlurAnimation;
+    animation-fill-mode:both;
+    animation-timing-function:linear;
+    animation-timeline:view(30% auto);
+}
+
+@keyframes autoBlurAnimation {
+    0%,100%{
+        filter:blur(50px)
+    }
+    45%,55%{
+        filter:blur(0px)
+    }
+}
