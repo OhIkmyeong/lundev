@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input type file</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <a href="https://www.youtube.com/watch?v=5tVA1qmuL3c">No Need Javascript - Best Tips CSS | Zero To Hero CSS Tutorial</a>
+    <nav>
+        <a href="#file">capture, accept</a>
+        <a href="#output">output</a>
+        <a href="#invalidvalid">invalid,valid</a>
+        <a href="#filter">filter drop shadow</a>
+        <a href="#datalist">datalist</a>
+        <a href="#smooth">smooth scroll</a>
+        <a href="#column">column</a>
+    </nav>
+
+    <h1 id="file">input type file의 capture와 accept</h1>
+    <label>
+        <input type="file" capture="user">
+        <span>웹에서는 아무 반응 없지만 모바일에선 셀프카메라</span>
+    </label>
+
+    <label>
+        <input type="file" capture="environment">
+        <span>웹에서는 아무 반응 없지만 모바일에선 후방카메라</span>
+    </label>
+
+    <label>
+        <input type="file" capture="environment" accept="picture/*">
+        <span>웹에서는 아무 반응 없지만 모바일에선 후방카메라-사진만</span>
+    </label>
+
+    <label>
+        <input type="file" capture="environment" accept="video/*">
+        <span>웹에서는 아무 반응 없지만 모바일에선 후방카메라-비디오만</span>
+    </label>
+
+    <h1 id="output">Output</h1>
+    <form oninput="total.value = price.value * quantity.value" onsubmit="(e)=>{e.preventDefault();}">
+        <label for="">
+            <span>price</span>
+            <input type="number" name="price">
+        </label>
+
+        <label for="">
+            <span>quantity</span>
+            <input type="number" name="quantity">
+        </label>
+
+        <label for="">
+            <span>Total Price = price * quantity : </span>
+            <output name="total"></output>
+        </label>
+    </form>
+
+    <h1 id="invalidvalid">:invalid, :valid:not(:placeholder-shown)</h1>
+    <label for="">
+        <span>valid, invalid CSS only</span>
+        <input type="email" placeholder="이메일주소를 입력해라">
+    </label>
+
+    <h1 id="filter">img boxshadow? filter:drop-shadow</h1>
+    <img src="./shoe.png"/>
+
+    <h1 id="datalist">datalist</h1>
+    <label>
+        <span>Overwatch Hero Name</span>
+        <input type="text" id="overwatch" list="overwatchDatalist">
+    </label>
+    <datalist id="overwatchDatalist">
+        <option value="moira"></option>
+        <option value="sigma"></option>
+        <option value="sombra"></option>
+        <option value="tracer"></option>
+        <option value="juno"></option>
+    </datalist>
+
+    <h1 id="smooth">html,body{scroll-behavior:smooth;}</h1>
+    <p>스크롤 부드럽게</p>
+
+    <h1 id="column">column text</h1>
+    <p class="columnText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis beatae quaerat laudantium veritatis mollitia fuga tempore sit consequuntur nostrum odio rerum optio, ipsam incidunt, ipsum necessitatibus consequatur quibusdam veniam aliquid qui iusto accusamus et reprehenderit tempora? Aspernatur voluptatum sequi tenetur omnis dolores, tempore corrupti odio illo est aperiam mollitia, eaque, explicabo accusamus. Nulla modi eos ut! Eaque sint, vero quas dolorum, in temporibus debitis quibusdam inventore, enim nisi amet ab. Corporis dolorem veritatis, nesciunt sunt impedit dolor, dolores nostrum soluta eius id voluptatibus iste, architecto sit hic ipsum laudantium nulla quos! Modi aliquid molestias totam molestiae veritatis nulla eos maiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quaerat aspernatur deleniti sit necessitatibus aliquam aliquid recusandae a perferendis doloremque, asperiores accusantium, sunt perspiciatis officiis voluptates quas. Omnis, nulla quibusdam repudiandae cum consequuntur culpa id cupiditate quae reprehenderit deleniti. Autem non dolore officia, incidunt, porro maxime, ipsum libero culpa id totam sint aperiam? Facilis deleniti quaerat, beatae tempore iusto eum ipsum debitis molestias pariatur quis? Tempore rerum error cumque corporis? Fugit aliquid consequatur quibusdam ipsum sed eligendi illum, mollitia hic assumenda beatae, ad dignissimos sint vero dolore voluptatum voluptatibus exercitationem iure! Laudantium ipsa modi perspiciatis non totam id nostrum quae, dolores repudiandae autem aliquam fugiat impedit in reiciendis quia ratione reprehenderit natus voluptatem, quisquam ad consequatur tempora aspernatur doloremque illum. Velit delectus magnam nobis quis recusandae sed, quaerat deserunt molestias quo magni facere at perspiciatis eum repudiandae assumenda ipsum porro praesentium modi? Sunt saepe dolorem et dicta! Atque, molestiae assumenda!</p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html,body{
+    scroll-behavior:smooth;
+}
+body{
+    padding:20px 20px 40px;
+    background:#dedede;
+}
+h1{
+    padding-top:2em;
+}
+label{
+    display:block;
+    position:relative;
+    margin:10px auto; padding:20px;
+    background:#fff;
+    border-radius:10px;
+}
+
+input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-family:inherit; font-size:16px; color:#000; font-weight:normal;
+}
+
+output{
+    font-size:1.25rem;font-weight:bold;
+}
+
+input[type="email"]:invalid{
+    outline:2px dotted red;
+    background:#fbe3e3;
+    border-color:red;
+    color:red; font-weight:bold;
+}
+
+input[type="email"]:valid:not(:placeholder-shown){
+    outline:none;
+    background:rgb(209, 244, 209);
+    border:none;
+    border-bottom:3px solid green;
+    border-radius:4px 4px 0 0;
+    color:rgb(7, 135, 7); font-weight:bold;
+}
+
+img{
+    width:100%;height:100%;object-fit:cover;
+    max-width:300px;
+    filter:drop-shadow(30px 30px 5px rgba(182, 81, 81, 0.434));
+}
+
+nav{
+    display:flex;flex-flow:row wrap;
+    justify-content:center; align-items:center;
+    gap:10px;
+    position:sticky; z-index:1000;
+    top:10px;
+    width:100%;
+    padding:10px;
+    margin-top:20px;
+    background:rgba(255, 255, 255, 0.187);
+    border:1px solid #000;
+    border-radius:8px;
+    backdrop-filter:blur(10px);
+}
+
+nav a{
+    text-decoration:none;
+    display:block;
+    padding:5px;
+    background:rgba(255, 255, 255, 0.343);
+    border-radius:5px;
+    font-size:14px;
+    color:#000;
+}
+
+.columnText{
+    columns:3;
+    font-family:serif; font-size:12px;
+}
