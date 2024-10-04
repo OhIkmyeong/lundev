@@ -1,0 +1,59 @@
+.pager{
+    display:flex;flex-flow:row nowrap;
+    justify-content:flex-end;align-items:center;
+    gap:14px;
+    position:relative;
+}
+
+.pager-btn{
+    position:relative;
+    width:35px; aspect-ratio:1/1;
+    background:#000;
+    border:2px solid #000;
+    border-radius:50%;
+}
+
+.pager-btn.off{
+    background:#fff;
+    border-color:var(--border-color);
+}
+
+.pager-btn::before{
+    content:'';display:block;position:absolute;
+    left:50%;top:50%;
+    transform:translate(-50%,-50%);
+    width:45%; height:1px;
+    background:#fff;
+    pointer-events:none;
+}
+.pager-btn.off::before{
+    background:#000;
+}
+.pager-btn::after{
+    content:'';display:block;position:absolute;
+    width:6px;aspect-ratio:1/1;
+    top:50%;
+    transform:translateY(-55%) rotate(45deg);
+    border:1px solid #fff;
+    pointer-events:none;
+}
+.pager-btn.off::after{
+    border-color:#000;
+}
+.pager-btn.pager-btn-prev::after{
+    left:9px;
+    border-right:none;
+    border-top:none;
+}
+.pager-btn.pager-btn-next::after{
+    right:9px;
+    border-left:none;
+    border-bottom:none;
+}
+
+.pager-number{
+    font-size:12px;
+    color:#ccc;
+}
+.pager-number-curr{color:#000;font-weight:bold;}
+.pager-number-all{color:#666;}

@@ -1,0 +1,79 @@
+.item{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    padding:0 40px;
+}
+.item-inner-wrap{
+    position:relative;
+    width:100%;
+}
+
+/* 별 */
+.star-sect{
+    display:flex;flex-flow:row nowrap;
+    justify-content:flex-start; align-items:center;
+    gap:5px;
+    position:relative;
+    width:100%;
+}
+
+.star{
+    position:relative;
+    font-size:15px;
+}
+.star-bg{
+    color:#dedede;
+}
+.star-sw{
+    --_per : calc((var(--sw, 0) * 2) * 10%);
+    position:absolute;
+    width:100%;
+    top:0;left:0;
+    clip-path: polygon(0 0, var(--_per) 0, var(--_per) 100%, 0% 100%);
+}
+.star-score-num{font-size:14px; font-weight:700; color:#000;}
+.star-score-whole{font-size:13px;font-weight:500;color:#888;}
+
+/* 텍스트 */
+.text{
+    position:relative;
+    width:100%;
+    margin-top:20px;
+    margin-bottom:60px;
+}
+.text-title{
+    margin-bottom:16px;
+    font-size:18px; font-weight:bold;
+}
+.text-content{
+    line-height:1.6;
+    font-size:14px; color:#777;
+    display:-webkit-box;
+    white-space:normal; 
+    -webkit-line-clamp:4;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    min-height:calc(1em * 6);
+}
+
+/* 하단영역 */
+.info{
+    display:flex;flex-flow:row wrap;
+    justify-content:space-between; align-items:center;
+    gap:10px;
+    position:relative;
+    width:100%;
+}
+
+.info-btn{
+    padding-bottom:1px;
+    background:transparent;
+    border:none;
+    border-bottom:2px solid #444;
+    font-size:13px; font-weight:600;
+}
+
+.info-date{
+    font-size:13px; color:#888;
+}

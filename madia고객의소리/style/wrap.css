@@ -1,0 +1,56 @@
+/* wrap */
+.wrap{
+    position:relative;
+    width:100%; max-width:1200px;
+    margin:40px auto;
+}
+
+.wrap-border{
+    content:"";display:block;position:absolute;
+    z-index:-1;
+    width:1px; height:100%;
+    transform:translateX(-1px);
+    top:0;
+    background:var(--border-color);
+    pointer-events:none;
+}
+.wrap-border:nth-child(1){left:0%;}
+.wrap-border:nth-child(2){left:25%;}
+.wrap-border:nth-child(3){left:50%;}
+.wrap-border:nth-child(4){left:75%;}
+.wrap-border:nth-child(5){left:100%;}
+
+/* list */
+.list{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:60px 0;
+    position:relative;
+    width:100%;
+}
+
+/* 미디어쿼리 */
+@media all and (max-width:1200px){
+    .wrap-border:nth-child(2){left:33%;}
+    .wrap-border:nth-child(3){left:66%;}
+    .wrap-border:nth-child(4){opacity:0;}
+    .list{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media all and (max-width:800px){
+    .wrap-border:nth-child(2){left:50%;}
+    .wrap-border:nth-child(3){opacity:0;}
+    .wrap-border:nth-child(4){opacity:0;}
+    .list{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media all and (max-width:600px){
+    .wrap-border:nth-child(2){opacity:0;}
+    .wrap-border:nth-child(3){opacity:0;}
+    .wrap-border:nth-child(4){opacity:0;}
+    .list{
+        grid-template-columns: 1fr;
+    }
+}
